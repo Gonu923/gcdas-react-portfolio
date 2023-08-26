@@ -1,0 +1,72 @@
+.about-me {
+  background-color: #f7f7f7;
+  padding: 4rem 0;
+  text-align: center;
+}
+
+.about-me-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.about-me-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.about-me-content p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.about-me-content h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.skills-list {
+  padding: 0;
+  font-size: 1.2rem;
+  text-align: center;
+  opacity: 1;
+}
+
+.skills-list li {
+  opacity: 1;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  margin: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  position: relative;
+}
+
+.skills-list li::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  transform-origin: left center;
+  transform: scaleX(0);
+  transition: transform 0.3s ease-in-out;
+}
+
+.skills-list li:hover::before {
+  transform: scaleX(1);
+  animation: wave 1s ease-in-out infinite;
+}
+
+@keyframes wave {
+  0%,
+  100% {
+    transform: scaleX(0);
+  }
+  50% {
+    transform: scaleX(1);
+  }
+}
