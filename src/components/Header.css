@@ -1,3 +1,4 @@
+/* Default styles for larger screens */
 .header {
   display: flex;
   align-items: center;
@@ -28,4 +29,21 @@
   font-weight: bold;
 }
 
-/* Add more styles as needed */
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column; /* Stack items vertically */
+    align-items: flex-start; /* Align items to the start */
+    padding: 0.5rem;
+  }
+
+  .title {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .navigation ul {
+    flex-direction: column; /* Stack navigation items vertically */
+    gap: 0.5rem;
+  }
+}
